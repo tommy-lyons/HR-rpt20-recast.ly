@@ -1,11 +1,7 @@
 var VideoListEntry = (props) => (
 
-  // handleClick = () => {
-  //   // when we click on the div, we want to change the state of the VideoPlayer component so that it plays the
-  //   // video corresponding to
-  // }
 
-  <div className="video-list-entry media" onClick={this.handleClick}>
+  <div className="video-list-entry media">
     <div className="media-left media-middle">
       <img className="media-object" src={props.video.snippet.thumbnails.default.url} alt="" />
     </div>
