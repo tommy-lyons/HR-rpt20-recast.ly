@@ -1,23 +1,12 @@
 var VideoListEntry = (props) => (
-
-
-  // FOR PASSING THE ARGUMENT TO THE PARENT (App,js)
-  // when we click on the title of the video that we're going to play
-  // we want to send that title to the parent App.js component
-  // and we want to call the click handler on the App.js component
-  // with an argument from the video that we click on,
-  // the argument needs to be
-
-  // function clickTest() {
-  //   console.log('clicked');
-  // }
-  // () => props.handleClick(props.video)
-  <div className="video-list-entry media" onClick={console.log('clicked')}>
+  // added onClick handler that calls the handler function on the props object, and passes it
+  // the video on the props object, which is the video that corresponds to this component.
+  // the function passed with the props.handler property is defined in App.js
+  <div className="video-list-entry media" onClick={() => props.handler(props.video)}>
     <div className="media-left media-middle">
       <img className="media-object" src={props.video.snippet.thumbnails.default.url} alt="" />
     </div>
     <div className="media-body">
-      {/* () => props.handleClick(props.video) */}
       <div className="video-list-entry-title">{props.video.snippet.title}</div>
       <div className="video-list-entry-detail">{props.video.snippet.description}</div>
     </div>
