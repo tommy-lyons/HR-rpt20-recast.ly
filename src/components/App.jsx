@@ -8,8 +8,15 @@ class App extends React.Component {
     super(props);
     this.state = {
       videoList: exampleVideoData,
-      currentVideo: exampleVideoData[0]
+      currentVideo: exampleVideoData[0] // this is going to change from teh onClick
+
     };
+  }
+
+  handleClick(clickedVideo) {
+    this.setState({
+      currentVideo: clickedVideo // video that's clicked on
+    });
   }
 
   render () {
@@ -22,10 +29,10 @@ class App extends React.Component {
         </nav>
         <div className="row">
           <div className="col-md-7">
-            <div><VideoPlayer video={exampleVideoData[0]}/></div>
+            <div><VideoPlayer video={this.state.currentVideo}/></div>
           </div>
           <div className="col-md-5">
-            <div><VideoList videos={exampleVideoData} /></div>
+            <div><VideoList videos={this.state.videoList} /></div>
           </div>
         </div>
       </div>
@@ -37,4 +44,11 @@ class App extends React.Component {
 // `var` declarations will only exist globally where explicitly defined
 export default App;
 
+
+// Make it so that when the title of a VideoListEntry is clicked, that video is displayed in the player.
+// Do not add state to any of the functional components.
+
+//  Make sure all the active tests for App are passing. You can open the tests with npm test
+
+// add the handler to the App component, and pass it to the VideoPlayer through the props object
 
