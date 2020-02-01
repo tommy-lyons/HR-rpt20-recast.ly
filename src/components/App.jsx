@@ -45,11 +45,3 @@ class App extends React.Component {
 // In the ES6 spec, files are "modules" and do not share a top-level scope
 // `var` declarations will only exist globally where explicitly defined
 export default App;
-
-
-// Make it so that when the title of a VideoListEntry is clicked, that video is displayed in the player.
-// Do not add state to any of the functional components.
-
-//  Make sure all the active tests for App are passing. You can open the tests with npm test
-
-
