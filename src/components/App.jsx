@@ -52,5 +52,4 @@ export default App;
 
 //  Make sure all the active tests for App are passing. You can open the tests with npm test
 
-// add the handler to the App component, and pass it to the VideoPlayer through the props object
 
